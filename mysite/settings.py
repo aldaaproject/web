@@ -37,7 +37,7 @@ SECRET_KEY = 'django-insecure-^t%0=3lay$p$gop3wqw%@36_yz5j*4iirnz2hq37qqe0-&wmk4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['aldaa.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'aldaa.pythonanywhere.com']
 
 
 # Application definition
@@ -70,7 +70,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, 'templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -145,6 +145,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+LOGIN_URL = '/auth-login'
+
 # STATIC_ROOT = os.path.join(BASE_DIR, 'statuc')
 
 MEDIA_URL = "/media/"
