@@ -1,0 +1,23 @@
+# Virtual environments
+venv/
+env/
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.so
+
+# SQLite database (hapus baris ini jika kamu mau upload db.sqlite3)
+# *.sqlite3
+
+# Django static file collection
+staticfiles/
+
+# Media uploads
+media/
+
+# VSCode project files (opsional)
+.vscode/
+
+# Log files
+*.log
