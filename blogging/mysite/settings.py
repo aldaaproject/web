@@ -37,7 +37,7 @@ SECRET_KEY = 'django-insecure-^t%0=3lay$p$gop3wqw%@36_yz5j*4iirnz2hq37qqe0-&wmk4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aldaa.pythonanywhere.com']
 
 
 # Application definition
@@ -96,11 +96,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'artikel_blog',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'ENGINE': 'django.db.backends.sqlite3', 
+        'NAME': BASE_DIR / 'db.sqlite3',
+        'USER': 'aldaa',
+        'PASSWORD': 'ps',
+        'HOST': 'aldaa.mysql.pythonanywhere-services.com',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }

@@ -35,7 +35,7 @@
                     <br /><br />
                     <div class="input-group input-group-dynamic">
                         <label for="projectName" class="form-label">Konten</label>
-                        {{ forms.konten }}
+                        {{ forms.konten|safe }}
                     </div>
                     <div class="input-group input-group-dynamic">{{ forms.kategori }}</div>
                     <br />
@@ -61,7 +61,7 @@
                 konten.removeAttribute("required");
             }
         });
-    </script>
+</script>
 
     <script src="{% static 'dashboard/assets/js/plugins/choices.min.js' %}"></script>
     <script src="{% static 'dashboard/assets/js/plugins/quill.min.js' %}"></script>
