@@ -37,7 +37,7 @@ SECRET_KEY = 'django-insecure-^t%0=3lay$p$gop3wqw%@36_yz5j*4iirnz2hq37qqe0-&wmk4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'aldaa.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'aldaaproject.pythonanywhere.com', 'marialda.pythonanywhere.com']
 
 
 # Application definition
@@ -77,6 +77,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.static',
             ],
         },
     },
@@ -97,8 +98,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'aldaa$webberita',
-        'USER': 'aldaa',
+        'NAME': 'marialda$web',
+        'USER': 'marialda',
         'PASSWORD': 'Davi2021_',
         'HOST': 'aldaa.mysql.pythonanywhere-services.com',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
@@ -152,6 +153,11 @@ LOGIN_URL = '/auth-login'
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+# CKEditor Upload Path
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_5_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
