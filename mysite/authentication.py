@@ -11,7 +11,7 @@ def login(request):
         if not username or not password:
             pesan = "username dan password wajib di isi"
         else:
-            user = authenticate(username=username, password=password)
+            user = authenticate(request, username=username, password=password)
             if user is not None:
                 auth_login(request, user)
                 pesan = "berhasil login"
